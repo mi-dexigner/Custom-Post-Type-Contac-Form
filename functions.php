@@ -41,13 +41,15 @@ function mi_contact_form($atts,$content = null){
 add_shortcode( 'contact_form', 'mi_contact_form' );
 
 
+// email testing Server
+
 function mailtrap($phpmailer) {
   $phpmailer->isSMTP();
   $phpmailer->Host = 'smtp.mailtrap.io';
   $phpmailer->SMTPAuth = true;
   $phpmailer->Port = 2525;
-  $phpmailer->Username = '63f4bd82620c96';
-  $phpmailer->Password = '1c982bf3122ec3';
+  $phpmailer->Username = '';
+  $phpmailer->Password = '';
 }
 add_action('phpmailer_init', 'mailtrap');
  ?>
