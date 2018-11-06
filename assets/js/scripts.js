@@ -24,6 +24,8 @@ $(window).load(function(){$('.loader').fadeOut();});
 
 $('#miContactForm').on('submit',function(e){
 e.preventDefault();	
+$('.has-error').removeClass('has-error');
+$('.js-show-feedback').removeClass('js-show-feedback');
 //console.log(' form was submit');
 var form    = $(this), 
 	name    = form.find('#name').val(),
